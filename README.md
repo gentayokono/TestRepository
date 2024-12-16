@@ -1,5 +1,0 @@
-# TestRepository
-
-hello,world.
-
-アイウエオ
