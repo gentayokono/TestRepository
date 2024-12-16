@@ -1,0 +1,27 @@
+@startuml
+actor Client
+participant Server as "サーバー"
+participant Database as "データベース"
+
+Client -> Server: データ要求
+Server -> Database: 問い合わせ
+Database --> Server: 結果を返す
+Server --> Client: データ
+@enduml
+
+
+@startuml
+participant "Main Function"
+participant calculate
+participant getInput
+
+activate "Main Function"
+"Main Function" -> calculate: 系sなんを実行
+activate calculate
+calulate -> getInput: 入力を取得
+activate getInput
+getInput --> calculate: 入力データ
+deactivate getInput
+calculate --> "Main function": 計算結果
+deactivate calculate
+@enduml
